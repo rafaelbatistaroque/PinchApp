@@ -7,7 +7,7 @@ struct InfoPanelView: View {
     @State private var isInfoPanelVisible: Bool = false
     
     func formaterDecimal(dec decimaPoint: Int, scale: CGFloat) -> String {
-        String(format: "%.\(decimaPoint)f", offset.width)
+        String(format: "%.\(decimaPoint)f", scale)
     }
     
     var body: some View {

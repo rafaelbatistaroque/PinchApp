@@ -13,6 +13,7 @@
 		5375481E28C8CE7E0052E8C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5375481D28C8CE7E0052E8C8 /* Preview Assets.xcassets */; };
 		5375482A28C8EAE80052E8C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375482928C8EAE80052E8C8 /* Constants.swift */; };
 		53F8E6FB28C916ED00912BE9 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8E6FA28C916ED00912BE9 /* InfoPanelView.swift */; };
+		53F8E6FD28C93C2000912BE9 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8E6FC28C93C2000912BE9 /* ControlImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		5375481D28C8CE7E0052E8C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5375482928C8EAE80052E8C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		53F8E6FA28C916ED00912BE9 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
+		53F8E6FC28C93C2000912BE9 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				53F8E6FA28C916ED00912BE9 /* InfoPanelView.swift */,
+				53F8E6FC28C93C2000912BE9 /* ControlImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				5375481928C8CE7C0052E8C8 /* ContentView.swift in Sources */,
 				53F8E6FB28C916ED00912BE9 /* InfoPanelView.swift in Sources */,
+				53F8E6FD28C93C2000912BE9 /* ControlImageView.swift in Sources */,
 				5375481728C8CE7C0052E8C8 /* PinchApp.swift in Sources */,
 				5375482A28C8EAE80052E8C8 /* Constants.swift in Sources */,
 			);

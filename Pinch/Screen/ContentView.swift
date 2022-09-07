@@ -26,7 +26,7 @@ struct ContentView: View {
                     .opacity(isAnimating ? 1 : 0)
                     .offset(x: imageOffset.width, y: imageOffset.height)
                     .scaleEffect(imageScale)
-
+                
                 //MARK: TAP GESTURE
                     .onTapGesture(count: 2, perform: {
                         if imageScale == 1 {
@@ -37,7 +37,7 @@ struct ContentView: View {
                             resetImageState()
                         }
                     })
-
+                
                 //MARK: DRAG GESTURE
                     .gesture(DragGesture()
                         .onChanged { value in
@@ -58,11 +58,58 @@ struct ContentView: View {
                     isAnimating = true
                 }
             })
-        //MARK: INFO PANEL
+            
+            //MARK: INFO PANEL
             .overlay(
                 InfoPanelView(scale: imageScale, offset: imageOffset)
-                .padding(.horizontal), alignment: .top)
+                    .padding(.horizontal), alignment: .top)
             
+            //MARK: - CONTROLS
+            .overlay(
+                Group{
+                    HStack(spacing: 12){
+                        Button{
+                            withAnimation(.spring()){
+                                if imageScale > 1 {
+                                    imageScale -= 1
+                                    
+                                    if imageScale <= 1 {
+                                        resetImageState()
+                                    }
+                                }
+                            }
+                        } label: {
+                            ControlImageView(icon: EImages.minus_magnifyingglass.rawValue)
+                        }
+                        
+                        Button{
+                            resetImageState()
+                        } label: {
+                            ControlImageView(icon: EImages.arrow_up_left_and_arrow_right_magnifyingglass.rawValue)
+                        }
+                        
+                        Button{
+                            withAnimation(.spring()){
+                                if imageScale < 5 {
+                                    imageScale += 1
+                                    
+                                    if imageScale > 5 {
+                                        imageScale = 5
+                                    }
+                                }
+                            }
+                        } label: {
+                            ControlImageView(icon: EImages.plus_magnifyingglass.rawValue)
+                        }
+                    }
+                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1 : 0)
+                    
+                }
+                , alignment: .bottom
+            )
         }.navigationViewStyle(.stack)
     }
 }
