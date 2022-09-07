@@ -11,6 +11,7 @@
 		5375481928C8CE7C0052E8C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375481828C8CE7C0052E8C8 /* ContentView.swift */; };
 		5375481B28C8CE7E0052E8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5375481A28C8CE7E0052E8C8 /* Assets.xcassets */; };
 		5375481E28C8CE7E0052E8C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5375481D28C8CE7E0052E8C8 /* Preview Assets.xcassets */; };
+		5375482A28C8EAE80052E8C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375482928C8EAE80052E8C8 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5375481828C8CE7C0052E8C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5375481A28C8CE7E0052E8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5375481D28C8CE7E0052E8C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5375482928C8EAE80052E8C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +53,12 @@
 		5375481528C8CE7C0052E8C8 /* Pinch */ = {
 			isa = PBXGroup;
 			children = (
+				5375482828C8EAD10052E8C8 /* Utils */,
 				5375482628C8E3530052E8C8 /* Data */,
 				5375482728C8E4920052E8C8 /* Model */,
 				5375482528C8E34B0052E8C8 /* View */,
-				5375481628C8CE7C0052E8C8 /* PinchApp.swift */,
 				5375482428C8E33A0052E8C8 /* Screen */,
+				5375481628C8CE7C0052E8C8 /* PinchApp.swift */,
 				5375481A28C8CE7E0052E8C8 /* Assets.xcassets */,
 				5375481C28C8CE7E0052E8C8 /* Preview Content */,
 			);
@@ -97,6 +100,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5375482828C8EAD10052E8C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5375482928C8EAE80052E8C8 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			files = (
 				5375481928C8CE7C0052E8C8 /* ContentView.swift in Sources */,
 				5375481728C8CE7C0052E8C8 /* PinchApp.swift in Sources */,
+				5375482A28C8EAE80052E8C8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
