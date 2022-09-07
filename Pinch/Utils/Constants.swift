@@ -10,4 +10,6 @@ enum EImages: String{
     case minus_magnifyingglass = "minus.magnifyingglass"
     case arrow_up_left_and_arrow_right_magnifyingglass = "arrow.up.left.and.down.right.magnifyingglass"
     case plus_magnifyingglass = "plus.magnifyingglass"
+    case chevron_compact_left = "chevron.compact.left"
+    case chevron_compact_right = "chevron.compact.right"
 }
