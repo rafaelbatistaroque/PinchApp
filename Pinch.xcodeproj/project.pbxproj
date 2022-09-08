@@ -14,6 +14,8 @@
 		5375482A28C8EAE80052E8C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375482928C8EAE80052E8C8 /* Constants.swift */; };
 		53F8E6FB28C916ED00912BE9 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8E6FA28C916ED00912BE9 /* InfoPanelView.swift */; };
 		53F8E6FD28C93C2000912BE9 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8E6FC28C93C2000912BE9 /* ControlImageView.swift */; };
+		53F8E6FF28C95E5F00912BE9 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8E6FE28C95E5F00912BE9 /* PageModel.swift */; };
+		53F8E70128C961CB00912BE9 /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8E70028C961CB00912BE9 /* PageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		5375482928C8EAE80052E8C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		53F8E6FA28C916ED00912BE9 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 		53F8E6FC28C93C2000912BE9 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
+		53F8E6FE28C95E5F00912BE9 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		53F8E70028C961CB00912BE9 /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		5375482728C8E4920052E8C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53F8E6FE28C95E5F00912BE9 /* PageModel.swift */,
+				53F8E70028C961CB00912BE9 /* PageData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 				53F8E6FB28C916ED00912BE9 /* InfoPanelView.swift in Sources */,
 				53F8E6FD28C93C2000912BE9 /* ControlImageView.swift in Sources */,
 				5375481728C8CE7C0052E8C8 /* PinchApp.swift in Sources */,
+				53F8E70128C961CB00912BE9 /* PageData.swift in Sources */,
+				53F8E6FF28C95E5F00912BE9 /* PageModel.swift in Sources */,
 				5375482A28C8EAE80052E8C8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

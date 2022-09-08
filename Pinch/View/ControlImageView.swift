@@ -11,7 +11,7 @@ struct ControlImageView: View {
 
 struct ControlImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ControlImageView(icon: EImages.minus_magnifyingglass.rawValue)
+        ControlImageView(icon: EAssets.icon_minus_magnifyingglass.rawValue)
             .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
             .padding()

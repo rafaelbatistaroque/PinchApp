@@ -5,6 +5,9 @@ struct ContentView: View {
     @State private var imageScale: CGFloat = 1
     @State private var imageOffset: CGSize = .zero
     @State private var isDrawerOpen: Bool = false
+    @State private var pageIndex: Int = 1
+    
+    let pages: [Page] = pagesData
     
     func resetImageState(){
         return withAnimation(.spring()){
@@ -13,13 +16,17 @@ struct ContentView: View {
         }
     }
     
+    func currentPage() -> String {
+        pages[pageIndex - 1].imageName
+    }
+    
     var body: some View {
         NavigationView{
             ZStack{
                 Color.clear
                 
                 //MARK: PAGE IMAGE
-                Image(EImages.magazine_front_cover.rawValue)
+                Image(currentPage())
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
@@ -103,13 +110,13 @@ struct ContentView: View {
                                 }
                             }
                         } label: {
-                            ControlImageView(icon: EImages.minus_magnifyingglass.rawValue)
+                            ControlImageView(icon: EAssets.icon_minus_magnifyingglass.rawValue)
                         }
                         
                         Button{
                             resetImageState()
                         } label: {
-                            ControlImageView(icon: EImages.arrow_up_left_and_arrow_right_magnifyingglass.rawValue)
+                            ControlImageView(icon: EAssets.icon_arrow_up_left_and_arrow_right_magnifyingglass.rawValue)
                         }
                         
                         Button{
@@ -123,7 +130,7 @@ struct ContentView: View {
                                 }
                             }
                         } label: {
-                            ControlImageView(icon: EImages.plus_magnifyingglass.rawValue)
+                            ControlImageView(icon: EAssets.icon_plus_magnifyingglass.rawValue)
                         }
                     }
                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
@@ -137,7 +144,7 @@ struct ContentView: View {
             //MARK: DRAWER
             .overlay(
                 HStack(spacing: 12){
-                    Image(systemName: isDrawerOpen ? EImages.chevron_compact_right.rawValue : EImages.chevron_compact_left.rawValue)
+                    Image(systemName: isDrawerOpen ? EAssets.icon_chevron_compact_right.rawValue : EAssets.icon_chevron_compact_left.rawValue)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 40)
@@ -148,6 +155,21 @@ struct ContentView: View {
                                 isDrawerOpen.toggle()
                             }
                         })
+                    
+                    ForEach(pages) { item in
+                        Image(item.thumbnailName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .opacity(isDrawerOpen ? 1 : 0)
+                            .animation(.easeOut(duration: 0.5), value: isDrawerOpen)
+                            .onTapGesture(perform: {
+                                isAnimating = true
+                                pageIndex = item.id
+                            })
+                    }
                     
                     Spacer()
                 }

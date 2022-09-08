@@ -13,7 +13,7 @@ struct InfoPanelView: View {
     var body: some View {
         HStack{
             //MARK: HOTSPOT
-            Image(systemName: EImages.circle_circle.rawValue)
+            Image(systemName: EAssets.icon_circle_circle.rawValue)
                 .symbolRenderingMode(.hierarchical)
                 .resizable()
                 .frame(width: 30, height: 30)
@@ -26,17 +26,17 @@ struct InfoPanelView: View {
             Spacer()
             //MARK: INFO PANEL
             HStack(spacing: 2){
-                Image(systemName: EImages.arrow_up_left_and_arrow_down_right.rawValue)
+                Image(systemName: EAssets.icon_arrow_up_left_and_arrow_down_right.rawValue)
                 Text(formaterDecimal(dec: 1, scale: scale))
                 
                 Spacer()
   
-                Image(systemName: EImages.arrow_left_and_right.rawValue)
+                Image(systemName: EAssets.icon_arrow_left_and_right.rawValue)
                 Text(formaterDecimal(dec: 2, scale: offset.width))
 
                 Spacer()
                 
-                Image(systemName: EImages.arrow_up_and_down.rawValue)
+                Image(systemName: EAssets.icon_arrow_up_and_down.rawValue)
                 Text(formaterDecimal(dec: 2, scale: offset.height))
             }
             .font(.footnote)
